@@ -1,0 +1,68 @@
+MVP - Микрозадачи
+
+1. ПРОЕКТИРОВАНИЕ СТРУКТУРЫ
+   Задача: Детальное планирование структуры приложения
+   - Основные параметры проекта:
+     * Название: Budget Buddy
+     * Минимальный SDK: API 24 (Android 7.0)
+     * Целевой SDK: последняя стабильная версия
+     * Язык: Java
+     * Пакет: com.budgetbuddy
+   
+   - Структура пакетов:
+     * com.budgetbuddy
+       - activities/    (активности приложения)
+         * MainActivity.java
+         * AddTransactionActivity.java
+       - adapters/     (адаптеры для списков)
+         * TransactionAdapter.java
+       - database/     (работа с БД)
+         * AppDatabase.java
+         * TransactionDao.java
+       - models/       (модели данных)
+         * Transaction.java
+         * Category.java
+       - utils/        (вспомогательные классы)
+         * DateUtils.java
+         * CurrencyUtils.java
+   
+   - Необходимые зависимости:
+     * androidx.appcompat:appcompat
+     * com.google.android.material:material
+     * androidx.room:room-runtime
+     * androidx.lifecycle:lifecycle-viewmodel
+     * androidx.lifecycle:lifecycle-livedata
+
+2. ПРОЕКТИРОВАНИЕ БАЗЫ ДАННЫХ
+   - Структура таблиц:
+     * transactions (id, type, amount, date, category, note)
+     * categories (id, name, type, icon)
+   - Базовые SQL запросы
+   - Предустановленные категории
+
+3. ПРОЕКТИРОВАНИЕ UI
+   - Макеты экранов (layouts):
+     * activity_main.xml
+     * activity_add_transaction.xml
+     * item_transaction.xml
+   - Базовые стили и темы
+   - Иконки и ресурсы
+
+4. ПЛАНИРОВАНИЕ ЛОГИКИ
+   - Добавление транзакций
+   - Расчет баланса
+   - Работа со списком
+   - Базовая валидация
+
+5. ПОДГОТОВКА К РЕАЛИЗАЦИИ
+   - Создание проекта в Android Studio
+   - Настройка Git репозитория
+   - Настройка зависимостей
+   - Базовая структура проекта
+
+Статус выполнения:
+[  ] Задача 1 - Проектирование структуры
+[  ] Задача 2 - Проектирование БД
+[  ] Задача 3 - Проектирование UI
+[  ] Задача 4 - Планирование логики
+[  ] Задача 5 - Подготовка к реализации

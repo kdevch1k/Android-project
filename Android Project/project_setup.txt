@@ -1,0 +1,81 @@
+Budget Buddy - Настройка проекта
+
+1. Параметры проекта в Android Studio
+   - Name: Budget Buddy
+   - Package: com.budgetbuddy
+   - Language: Java
+   - Minimum SDK: API 24 (Android 7.0)
+   - Target SDK: Latest stable
+   - Build System: Gradle
+
+2. Зависимости (build.gradle)
+
+   implementation 'androidx.appcompat:appcompat:1.6.1'
+   implementation 'com.google.android.material:material:1.9.0'
+   implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+   
+   // Room компоненты
+   implementation 'androidx.room:room-runtime:2.5.2'
+   annotationProcessor 'androidx.room:room-compiler:2.5.2'
+   
+   // ViewModel и LiveData
+   implementation 'androidx.lifecycle:lifecycle-viewmodel:2.6.1'
+   implementation 'androidx.lifecycle:lifecycle-livedata:2.6.1'
+   
+   // RecyclerView
+   implementation 'androidx.recyclerview:recyclerview:1.3.1'
+   
+   // Material Design
+   implementation 'com.google.android.material:material:1.9.0'
+
+3. Структура проекта
+
+src/main/
+├── java/com/budgetbuddy/
+│   ├── activities/
+│   │   ├── MainActivity.java
+│   │   └── AddTransactionActivity.java
+│   ├── adapters/
+│   │   └── TransactionAdapter.java
+│   ├── database/
+│   │   ├── AppDatabase.java
+│   │   ├── TransactionDao.java
+│   │   └── CategoryDao.java
+│   ├── models/
+│   │   ├── Transaction.java
+│   │   └── Category.java
+│   └── utils/
+│       ├── DateUtils.java
+│       └── CurrencyUtils.java
+│
+└── res/
+    ├── layout/
+    │   ├── activity_main.xml
+    │   ├── activity_add_transaction.xml
+    │   └── item_transaction.xml
+    ├── values/
+    │   ├── colors.xml
+    │   ├── strings.xml
+    │   ├── styles.xml
+    │   └── dimens.xml
+    └── drawable/
+        └── [иконки категорий]
+
+4. Настройка Git
+
+.gitignore:
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+Первоначальные коммиты:
+1. Initial commit - базовая структура проекта
+2. Add project dependencies
+3. Create database structure
+4. Add basic UI layouts
+5. Implement MVP functionality
